@@ -18,3 +18,30 @@ console.log(schedule);
 schedule.pop(); //removes the last element.
 schedule.push('die'); //adds specified element to the end of the array.
 schedule.reverse(); //array has been reversed.
+//=============================================
+
+
+// TASK-2 //
+
+let total=0;
+for(let i=0; i<=287; i++){
+    total = total + i;
+}
+console.log('the total is:'+total);
+// =================================
+//if the item is even, it adds it to the evens array, 
+//if the item is odd, it adds it to the odds array.
+let nums = [1,2,3,4,5,6,7,8,9,78,77];
+const evens = [];
+const odds = [];
+
+for (let i = 0; i < nums.length; i++) {
+    if ((nums[i] % 2) === 1) {
+        odds.push(nums[i]);
+    }
+    else {
+        evens.push(nums[i]);
+    }
+}
+console.log(evens);
+console.log(odds);
