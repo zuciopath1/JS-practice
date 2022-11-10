@@ -1,9 +1,9 @@
 const name = 'zurab';
 
 function toUpper(text){
-const uppercased = text.toUpperCase();
-console.log(uppercased);
-}
+    const uppercased = text.toUpperCase();
+    console.log(uppercased);
+    }
 
 toUpper(name);
 /*
@@ -35,7 +35,7 @@ let nums = [1,2,3,4,5,6,7,8,9,78,77];
 const evens = [];
 const odds = [];
 
-for (let i = 0; i < nums.length; i++) {
+for (let i = 0; i <= nums.length; i++) {
     if ((nums[i] % 2) === 1) {
         odds.push(nums[i]);
     }
@@ -45,3 +45,36 @@ for (let i = 0; i < nums.length; i++) {
 }
 console.log(evens);
 console.log(odds);
+//===============================
+
+const join= (...strings) => strings.join('');
+console.log(join('hello'+''+'world'));
+
+let pattern = '';
+for (let i = 1; i < 10; i++) {
+    pattern += i + ' ';
+    console.log(pattern);
+}
+// 
+// program to find the square of a number
+// function is declared inside the variable
+let x = function (num) { return num * num };
+console.log(x(28));
+let y = x(15);
+console.log(y);
+//=================================
+const arr = ['ONE', 'TWO', 'THREE'];
+const lower = [];
+arr.forEach(element => {
+  lower.push(element.toLowerCase());
+});
+
+console.log(lower);
+//==================
+const mySentence = "javascript surprised me by being so challenging.";
+const words = mySentence.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+}
+console.log(words)
