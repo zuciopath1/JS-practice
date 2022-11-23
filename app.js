@@ -77,4 +77,35 @@ const words = mySentence.split(" ");
 for (let i = 0; i < words.length; i++) {
     words[i] = words[i][0].toUpperCase() + words[i].substr(1);
 }
-console.log(words)
+console.log(words);
+
+
+// ==================================
+// const signUp =document.querySelector('#signUp');
+// const submit = document.querySelector('#none');
+// console.log('signUp')
+
+// signUp.addEventListener('click', (event) =>{
+//         main.style.display = 'block';
+// })
+
+// none.addEventListener('click', () =>{
+//     main.style.display = 'none';
+// });
+
+const form = document.querySelector('#form');
+const firstName = document.querySelector('input[name=firstname]');
+const lastName = document.querySelector('input[name=lastname]');
+const country = document.querySelector('#country');
+const ul = document.querySelector('#ul');
+form.addEventListener('submit', (event)=>{
+    event.preventDefault('submited');
+    if(!firstName.value.trim() || !lastName.value.trim()){
+        alert('empty field');
+        return;
+    }
+    const li = document.createElement('li');
+    li.textContent=`${firstName.value} ${lastName.value} ${country.value}`;
+    ul.appendChild(li);
+    console.log('submited',firstName.value='',lastName.value='',country.value, firstName.focus());
+});
